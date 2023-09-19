@@ -20,4 +20,4 @@ print("Training complete!")
 joblib.dump(model, "model.joblib")
 
 with open("metrics.txt", 'w') as fw:
-  fw.write("Mean Squared Error of current model is: ", mean_squared_error(y_test, y_pred))
+  fw.write(f"Mean Squared Error of current model is: {mean_squared_error(y_test, y_pred)}")
