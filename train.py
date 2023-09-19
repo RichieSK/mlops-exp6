@@ -18,3 +18,6 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 print("Training complete!")
 joblib.dump(model, "model.joblib")
+
+with open("metrics.txt", 'w') as fw:
+  fw.write("Mean Squared Error of current model is: ", mean_squared_error(y_test, y_pred))
